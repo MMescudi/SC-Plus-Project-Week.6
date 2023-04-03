@@ -1,0 +1,187 @@
+.weather.app {
+  max-width: 520px;
+  height: 400px;
+  margin: 20px auto;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 20px 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  /*background-image: url(wave-haikei.svg);*/
+}
+input {
+  font-size: 17px;
+  padding: 5px 15px;
+  text-align: center;
+  position: relative;
+  right: 110px;
+}
+.inputCity {
+  text-align: right;
+}
+.search-bar {
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 8px;
+  text-align: center;
+}
+.search-btn {
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 8px;
+  transition: all 120ms ease-in-out;
+}
+.search-btn:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+.current-location-btn {
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 8px;
+  font-size: 17px;
+  padding: 5px 15px;
+  text-align: center;
+  transition: all 120ms ease-in-out;
+  background-image: url(ping.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 30px;
+  position: relative;
+  top: 4px;
+}
+.current-location-btn:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+.head-ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.head-li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.header {
+  position: relative;
+  left: -25px;
+  top: 28px;
+}
+
+h1 {
+  font-size: 40px;
+  position: relative;
+  left: 70px;
+  bottom: 40px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+p {
+  font-size: 18px;
+  position: relative;
+  left: 130px;
+  bottom: 50px;
+  margin-bottom: 5px;
+  font-weight: 200;
+}
+h3 {
+  font-size: 12px;
+  text-align: right;
+}
+h2 {
+  position: relative;
+  top: 0px;
+  right: 60px;
+}
+.current-weather-emoji {
+  position: relative;
+  left: 70px;
+  bottom: 150px;
+  width: 70px;
+}
+.temperature {
+  display: block;
+  position: relative;
+  left: 210px;
+  bottom: 45px;
+  font-size: 42px;
+  margin-top: 5px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.units {
+  display: block;
+  font-size: 18px;
+  position: relative;
+  left: 270px;
+  bottom: 90px;
+}
+
+a {
+  text-decoration: none;
+}
+.extra-ul {
+  list-style: none;
+  text-align: left;
+  position: relative;
+  bottom: 230px;
+  left: 370px;
+  padding: 0;
+}
+
+.forcast {
+  position: relative;
+  bottom: 155px;
+  height: 200px;
+}
+.forcast-ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  top: 5px;
+  right: 5px;
+}
+.forcast-li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.forcast-emoji-mon {
+  position: relative;
+  left: 50px;
+}
+.forcast-emoji-tue {
+  position: relative;
+  left: 142px;
+  bottom: 50px;
+}
+.forcast-emoji-wed {
+  position: relative;
+  left: 233px;
+  bottom: 105px;
+}
+.forcast-emoji-thu {
+  position: relative;
+  left: 330px;
+  bottom: 158px;
+}
+.forcast-emoji-fri {
+  position: relative;
+  left: 415px;
+  bottom: 205px;
+}
+.forcast-ul-temp {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  bottom: 220px;
+}
+.forcast-li-temp {
+  display: inline-block;
+  margin: 0 18px;
+}

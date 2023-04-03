@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="SC-PlusProject.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/70f27b0220.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Plus Project</title>
+  </head>
+  <body>
+    <div class="weather app">
+      <form class="inputCity" id="input-city">
+        <input
+          class="search-bar"
+          id="type-city"
+          type="search"
+          placeholder="Enter City"
+        />
+        <input class="search-btn" type="submit" value="Search" />
+        <button class="current-location-btn" id="current-location-btn"></button>
+      </form>
+      <h3>Mon March 12:00; 2023</h3>
+      <!--<ul class="head-ul">
+        <a href=""
+          ><li class="head-li">Humidity</li>
+          <li class="head-li">Temperature</li>
+          <li class="head-li">Wind</li></a
+        >
+      </ul>-->
+      <div class="header">
+        <h1 id="city"></h1>
+        <p class="description" id="description">foggy</p>
+        <h2>
+          <span class="temperature" id="temperature"></span
+          ><span class="units">
+            <a href="#" id="celsius-link">°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a>
+          </span>
+        </h2>
+
+        <img
+          class="current-weather-emoji"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/394/original/weather-emo.png?1678706538"
+          alt=""
+        />
+        <div class="extra-weather-data">
+          <ul class="extra-ul">
+            <li class="extra-li">Humidity: <span id="humidity"></span>%</li>
+            <li class="extra-li">Wind: <span id="wind"></span>km/h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="forcast">
+        <ul class="forcast-ul">
+          <li class="forcast-li">Monday</li>
+          <li class="forcast-li">Tuesday</li>
+          <li class="forcast-li">Wednesday</li>
+          <li class="forcast-li">Thursday</li>
+          <li class="forcast-li">Friday</li>
+        </ul>
+
+        <div class="forcast-emoji-mon">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/392/original/weather-emo-cloudy.png?1678706483"
+          />
+        </div>
+        <div class="forcast-emoji-tue">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/390/original/weather-emo-rainy.png?1678706389"
+          />
+        </div>
+        <div class="forcast-emoji-wed">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/394/original/weather-emo.png?1678706538"
+          />
+        </div>
+        <div class="forcast-emoji-thu">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/394/original/weather-emo.png?1678706538
+"
+          />
+        </div>
+        <div class="forcast-emoji-fri">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/392/original/weather-emo-cloudy.png?1678706483"
+          />
+        </div>
+        <ul class="forcast-ul-temp">
+          <li class="forcast-li-temp">12° | 5°</li>
+          <li class="forcast-li-temp">12° | 5°</li>
+          <li class="forcast-li-temp">12° | 5°</li>
+          <li class="forcast-li-temp">12° | 5°</li>
+          <li class="forcast-li-temp">12° | 5°</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="SC-Plus Project.js"></script>
+  </body>
+</html>
