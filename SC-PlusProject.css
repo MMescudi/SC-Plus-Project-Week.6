@@ -79,7 +79,7 @@ h1 {
   margin-bottom: 5px;
   font-weight: 500;
 }
-p {
+.description {
   font-size: 18px;
   position: relative;
   left: 130px;
@@ -184,4 +184,8 @@ a {
 .forcast-li-temp {
   display: inline-block;
   margin: 0 18px;
+}
+.openSourceLink {
+  position: relative;
+  left: 400px;
 }
