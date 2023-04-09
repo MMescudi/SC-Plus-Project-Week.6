@@ -1,16 +1,16 @@
 .weather-app-body {
   border-radius: 5px;
   width: 460px;
-  height: 500px;
+  height: 418px;
   display: block;
   margin: 30px auto;
   padding: 20px 60px;
-  background-color: rgb(178 174 197 / 33%);
+  background-image: url(blurry-gradient-haikei.svg);
   font-family: arial;
-  box-shadow: 0px 0px 17px 6px #000000;
+  box-shadow: 0px 0px 09px 0px #000000;
 }
 body {
-  background-color: #80a4c3;
+  background-color: #d4e9ef;
 }
 form {
   text-align: center;
@@ -18,17 +18,20 @@ form {
 }
 .search-bar {
   text-align: center;
-  padding: 7px 50px;
+  padding: 9px 73px;
   border: 1px solid black;
   border-radius: 10px;
+  background-color: rgb(251 251 251 / 66%);
+  font-weight: 700;
 }
 .search-btn {
   text-align: center;
-  padding: 7px 10px;
+  padding: 9px 10px;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: white;
+  background-color: rgb(251 251 251 / 66%);
   margin-top: 5px;
+  font-weight: 700;
 }
 .search-btn:hover {
   cursor: pointer;
@@ -38,11 +41,11 @@ form {
   border: 1px solid white;
 }
 .location-btn {
-  background-color: white;
-  border: 1px solid grey;
+  background-color: rgb(251 251 251 / 66%);
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 8px;
   font-size: 17px;
-  padding: 5px 15px;
+  padding: 17px 15px;
   text-align: center;
   transition: all 120ms ease-in-out;
   background-image: url(ping.png);
@@ -51,7 +54,7 @@ form {
   width: 50px;
   height: 30px;
   position: relative;
-  top: 4px;
+  top: -4px;
 }
 .location-btn:hover {
   cursor: pointer;
@@ -64,9 +67,10 @@ h3 {
   font-size: 15px;
   text-align: center;
   font-weight: 300;
+  margin-top: 5px;
 }
 h1 {
-  margin-top: 55px;
+  margin-top: 30px;
   margin-bottom: 8px;
   text-transform: capitalize;
 }
@@ -74,15 +78,16 @@ h2 {
   font-size: 15px;
   margin-left: 80px;
   margin-top: 0px;
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 }
 h2::first-letter {
   text-transform: capitalize;
 }
 .current-weather-container {
   display: grid;
-  grid-template-columns: 11fr 15fr 30fr;
-  grid-template-rows: 142px;
+  grid-template-columns: 8fr 15fr 30fr;
+  grid-template-rows: 111px;
+  align-items: center;
 }
 .current-temp {
   font-size: 50px;
@@ -103,12 +108,14 @@ h2::first-letter {
 }
 
 .current-weather-emoji {
-  width: 80%;
+  width: 105%;
+  position: relative;
+  bottom: 5px;
 }
 ul {
   list-style: none;
   position: relative;
-  top: 10px;
+
   margin-left: 60px;
 }
 .forcast-container {
@@ -126,7 +133,7 @@ ul {
 .link {
   text-decoration: none;
   position: relative;
-  top: 28px;
+  top: 9px;
   font-size: 14px;
   right: 55px;
 }
