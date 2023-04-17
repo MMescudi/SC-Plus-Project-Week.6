@@ -39,6 +39,57 @@ let months = [
 let month = months[now.getMonth()];
 h3.innerHTML = `${day}, ${month} ${date}, ${hours}:${minutes}, ${year}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  return days[day];
+}
+
+function displayForcast(response) {
+  let forecast = response.data.daily;
+  console.log(response.data.daily);
+
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 4) {
+      forecastHTML =
+        forecastHTML +
+        `
+    <div class="col-3">
+      <div class="weather-forecast-date">${formatDay(forecastDay.time)}</div>
+      <img
+        src=${forecastDay.condition.icon_url}
+        alt=""
+        width="42"
+      />
+      <div class="weather-forecast-temperatures mt-1">
+        <span class="weather-forecast-temperature-max"> ${Math.round(
+          forecastDay.temperature.maximum
+        )}° | </span>
+        <span class="weather-forecast-temperature-min"> ${Math.round(
+          forecastDay.temperature.minimum
+        )}° </span>
+      </div>
+  </div>`;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  key = "b3538b22709dco0f1833fa618t8f41ba";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${key}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForcast);
+}
+
 function displayTemperature(response) {
   console.log(response);
 
@@ -61,6 +112,8 @@ function displayTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+
+  getForecast(response.data.coordinates);
 }
 
 function search(city) {
@@ -115,13 +168,3 @@ let currentLocationBtn = document.querySelector("#locationBtn");
 currentLocationBtn.addEventListener("click", getCurrentLocation);
 
 search("New York");
-/*
-function showPosition(position) {
-  let h1 = document.querySelector("#city")
-  h1.innerHTML = ``
-  console.log(position.coords.latitude);
-}
-
-function getCurrentPosition (){
-  navigator.geolocation.getCurrentPosition(showPosition);
-}*/
