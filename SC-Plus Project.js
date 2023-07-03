@@ -1,4 +1,5 @@
 //Time & Date settings
+
 function realTime() {
   let later = moment().add(10, "years").format("ddd, MMMM DD. YYYY HH:mm");
   let laterElement = document.querySelector("#time");
@@ -12,7 +13,6 @@ function formatDay(timestamp) {
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   return days[day];
 }
-setInterval(formatDay, 1000);
 
 function displayForcast(response) {
   let forecast = response.data.daily;
