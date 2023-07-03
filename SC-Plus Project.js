@@ -1,10 +1,18 @@
 //Time & Date settings
 function realTime() {
-  let today = moment().format("ddd, MMMM DD. YYYY, HH:mm");
-  let todayElement = document.querySelector("#time");
-  todayElement.innerHTML = today;
+  let later = moment().add(10, "years").format("ddd, MMMM DD. YYYY HH:mm");
+  let laterElement = document.querySelector("#time");
+  laterElement.innerHTML = later;
 }
-setInterval(realTime, 1000);
+setInterval(realTime, 100);
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  return days[day];
+}
+setInterval(formatDay, 1000);
 
 function displayForcast(response) {
   let forecast = response.data.daily;
